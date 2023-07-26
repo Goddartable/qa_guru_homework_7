@@ -51,7 +51,7 @@ public class PracticeFormTest {
         $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#hobbiesWrapper").$(byText("Music")).click();
 
-        $("#uploadPicture").uploadFile(new File("src/picture/13912597291716.jpg"));
+        $("#uploadPicture").uploadFromClasspath("13912597291716.jpg");
 
         $("#currentAddress").setValue("Terra");
 
