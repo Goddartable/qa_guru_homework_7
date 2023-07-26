@@ -15,14 +15,15 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class PracticeFormTest {
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
 
     }
+
     @Test
-    void fillFormTest(){
+    void fillFormTest() {
         open("/automation-practice-form");
 
         executeJavaScript("$('#fixedban').remove()");
@@ -45,7 +46,7 @@ public class PracticeFormTest {
 
 
         $("#subjectsInput").setValue("Physics").pressEnter();
-       // $("#subjectsWrapper").$(byText("Physics")).click();
+        // $("#subjectsWrapper").$(byText("Physics")).click();
 
         $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#hobbiesWrapper").$(byText("Music")).click();
