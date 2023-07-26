@@ -24,6 +24,9 @@ public class PracticeFormTest {
     void fillFormTest(){
         open("/automation-practice-form");
 
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+
 
         $("#firstName").setValue("Konstantin");
         $("#lastName").setValue("Dymov");
@@ -69,10 +72,6 @@ public class PracticeFormTest {
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Reading, Music"));
         $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("13912597291716.jpg"));
         $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("NCR Delhi"));
-
-
-
-
 
 
     }
