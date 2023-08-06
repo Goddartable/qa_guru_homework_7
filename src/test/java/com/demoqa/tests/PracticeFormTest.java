@@ -1,4 +1,4 @@
-package com.demoqa;
+package com.demoqa.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -13,14 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
 
-public class PracticeFormTest {
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy = "eager";
-
-    }
+public class PracticeFormTest extends TestBase {
 
     @Test
     void fillFormTest() {
