@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pages.components.CalendarComponent;
 import com.demoqa.pages.components.TableResponsiveComponent;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
@@ -28,10 +27,7 @@ public class RegistrationPage {
             submit = $("#submit");
 
 
-
-
-
-    public RegistrationPage openPage(){
+    public RegistrationPage openPage() {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
@@ -47,6 +43,7 @@ public class RegistrationPage {
         lastNameInput.setValue(value);
         return this;
     }
+
     public RegistrationPage setUserEmail(String value) {
         userEmailInput.setValue(value);
         return this;
@@ -56,6 +53,7 @@ public class RegistrationPage {
         genderWrapper.$(byText(value)).click();
         return this;
     }
+
     public RegistrationPage setPhoneNumber(String value) {
         setPhoneInput.setValue(value);
         return this;
@@ -63,7 +61,7 @@ public class RegistrationPage {
 
     public RegistrationPage setBirthDate(String day, String month, String year) {
         $("#dateOfBirthInput").click();
-        calendar.setDate(day,month,year);
+        calendar.setDate(day, month, year);
         return this;
     }
 
@@ -99,7 +97,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage submitButton(){
+    public RegistrationPage submitButton() {
         submit.click();
         return this;
     }
